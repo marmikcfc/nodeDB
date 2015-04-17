@@ -1,9 +1,9 @@
-var Table = require("./lib/db").db
+var Table = require("./lib/db").db;
 
-var table = new Table()
+var table = new Table();
 
-table.createIndex("username")
-table.createIndex("status")
+table.createIndex("username");
+table.createIndex("status");
 
 for (var i = 0; i < 100; i++) {
   table.insert({
@@ -25,5 +25,5 @@ console.log(records);
 console.time("findBy status");
 var records = table.findBy('status', "online");
 console.timeEnd("findBy status");
-console.log("LEngth");
+console.log("Length");
 console.log('Found', records.length, 'records');
